@@ -12,13 +12,13 @@ const Preview = () => {
             <table width="600" cellPadding="0" cellSpacing="0">
               <tbody>
                 <tr>
-                  <td width="121">
+                  <td width="120">
                     <img
-                      src="http://www.mccd.edu/_resources/_images/brand/merced-college-logo-email-sig.png"
+                      src="/logo.png"
                       title="mclogo"
                       alt="Merced_College"
-                      width="121"
-                      height="100"
+                      width="120"
+                      height="120"
                     />
                   </td>
                   <td

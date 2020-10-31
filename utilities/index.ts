@@ -11,6 +11,6 @@ export const copySignatureToClipboard = () => {
     document.execCommand("copy");
     window.getSelection()?.removeAllRanges();
 
-    toast.dark("Copied 🎉");
+    toast("Copied 🎉");
   }
 };
