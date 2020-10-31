@@ -16,9 +16,54 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-gray-700 mb-4">VmX Email Signature</h1>
           <h3 className="text-xl font-bold text-gray-600 mb-4">Step 1</h3>
           <p className="mb-4">Fill in your details.</p>
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-name"
+              >
+                Name
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-name"
+                type="text"
+                placeholder="Nick Laird"
+              />
+            </div>
+            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-phone"
+              >
+                Phone
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-phone"
+                type="tel"
+                placeholder="+1 234567890"
+              />
+            </div>
+            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-email"
+              >
+                Email
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-email"
+                type="email"
+                placeholder="email@verumex.com"
+              />
+            </div>
+          </div>
           <p className="font-bold text-gray-600">Preview</p>
           <Signature />
           <h3 className="text-xl font-bold text-gray-600 mb-4">Step 2</h3>
+          <p className="mb-4">This will copy signature into your clipboard.</p>
           <div className="my-12">
             <a
               onClick={copySignatureToClipboard}
