@@ -1,61 +1,51 @@
-const Preview = () => {
+import { FunctionComponent } from "react";
+
+interface Props {
+  name: string;
+}
+
+const Preview: FunctionComponent<Props> = ({ name }) => {
   return (
-    <table
-      id="signature"
-      cellPadding="0"
-      cellSpacing="0"
-      style={{ fontSize: "12px", fontFamily: "Arial", lineHeight: "17px" }}
-    >
+    <table id="signature" cellPadding="0" cellSpacing="0" className="font-sans">
       <tbody>
         <tr>
           <td width="100%">
-            <table width="600" cellPadding="0" cellSpacing="0">
+            <table width="500" cellPadding="0" cellSpacing="0">
               <tbody>
                 <tr>
                   <td width="120">
                     <img
                       src="/logo.png"
-                      title="mclogo"
-                      alt="Merced_College"
+                      title="Verumex"
+                      alt="Verumex logo"
                       width="120"
                       height="120"
                     />
                   </td>
                   <td
-                    width="479"
+                    width="379"
+                    className="text-primary"
                     style={{
-                      color: "#001d51",
-                      paddingLeft: 20,
-                      paddingTop: 10,
+                      paddingLeft: 12,
+                      paddingTop: 14,
                       paddingBottom: 10,
                       paddingRight: 10,
                     }}
                   >
                     <span
+                      className="text-primary"
                       style={{
-                        color: "#c8932b",
-                        fontSize: 25,
-                        fontFamily: "Constantia, Lucida Bright, ejaVu Serif, Georgia, serif",
+                        fontSize: 24,
                         lineHeight: "20px",
                       }}
                     >
-                      Your Name
+                      {name}
                     </span>
                     <br />
 
-                    <span style={{ fontStyle: "italic" }}>Your position info here</span>
+                    <span style={{ fontStyle: "normal" }}>M: +47 47 88 21 21</span>
                     <br />
-                    <span style={{ fontStyle: "normal" }}>3600 M Street, Merced CA 95348</span>
-                    <br />
-                    <span style={{ fontStyle: "normal" }}>
-                      (209) 384-xxxx |{" "}
-                      <a
-                        style={{ textDecoration: "none", color: "#001d51" }}
-                        href="http://www.mccd.edu"
-                      >
-                        www.mccd.edu
-                      </a>
-                    </span>
+                    <span style={{ fontStyle: "normal" }}>E: nbl@verumex.com</span>
                   </td>
                 </tr>
               </tbody>
