@@ -19,7 +19,7 @@ export default function Home() {
       <section className="fixed top-0 left-0 overflow-y-scroll flex justify-center items-center bg-primary w-full h-full">
         <div className="bg-white p-8 lg:p-12">
           <h1 className="text-3xl font-bold text-gray-700 mb-4">VmX Email Signature</h1>
-          <h3 className="text-xl font-bold text-gray-600 mb-4">Step 1</h3>
+          <h2 className="text-xl font-bold text-gray-600 mb-4">Step 1</h2>
           <p className="mb-4">Fill in your details.</p>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
           <p className="font-bold text-gray-600">Preview</p>
           <Signature {...{ name, phone, email }} />
-          <h3 className="text-xl font-bold text-gray-600 mb-4">Step 2</h3>
+          <h2 className="text-xl font-bold text-gray-600 mb-4">Step 2</h2>
           <p className="mb-4">This will copy signature into your clipboard.</p>
           <div className="my-12">
             <a
@@ -83,7 +83,7 @@ export default function Home() {
               Copy
             </a>
           </div>
-          <h3 className="text-xl font-bold text-gray-600 mb-4">Step 3</h3>
+          <h2 className="text-xl font-bold text-gray-600 mb-4">Step 3</h2>
           <p>
             Paste into your email client. Example instructions for&nbsp;
             <a
