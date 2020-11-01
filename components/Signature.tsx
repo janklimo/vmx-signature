@@ -49,10 +49,13 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         </tr>
                         <tr>
                           <td valign="middle">
-                            <p style={{ fontSize: 12, margin: 0 }} className="font-sans">
+                            <p
+                              style={{ fontSize: 12, margin: 0, lineHeight: "15px" }}
+                              className="font-sans"
+                            >
                               <span
-                                style={{ paddingRight: 0, fontSize: 13, fontWeight: 600 }}
-                                className="text-primary inline-block w-5"
+                                style={{ paddingRight: 4, fontSize: 13, fontWeight: 600 }}
+                                className="text-primary"
                               >
                                 M:
                               </span>
@@ -64,10 +67,13 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         </tr>
                         <tr>
                           <td valign="middle">
-                            <p style={{ fontSize: 12, margin: 0 }} className="font-sans">
+                            <p
+                              style={{ fontSize: 12, margin: 0, lineHeight: "15px" }}
+                              className="font-sans"
+                            >
                               <span
-                                style={{ paddingRight: 0, fontSize: 13, fontWeight: 600 }}
-                                className="text-primary inline-block w-5"
+                                style={{ paddingRight: 10, fontSize: 13, fontWeight: 600 }}
+                                className="text-primary"
                               >
                                 E:
                               </span>
