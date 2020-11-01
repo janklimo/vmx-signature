@@ -56,7 +56,13 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                                 marginBottom: 5,
                               }}
                             >
-                              <span style={{ color: primaryColor }}>{name}</span>
+                              <span
+                                style={{
+                                  color: `${primaryColor} !important`,
+                                }}
+                              >
+                                {name}
+                              </span>
                             </p>
                           </td>
                         </tr>
@@ -72,7 +78,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                             >
                               <span
                                 style={{
-                                  color: primaryColor,
+                                  color: `${primaryColor} !important`,
                                   paddingRight: 4,
                                   fontSize: 13,
                                   fontWeight: 600,
@@ -98,7 +104,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                             >
                               <span
                                 style={{
-                                  color: primaryColor,
+                                  color: `${primaryColor} !important`,
                                   paddingRight: 10,
                                   fontSize: 13,
                                   fontWeight: 600,
