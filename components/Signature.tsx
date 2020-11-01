@@ -8,6 +8,8 @@ interface Props {
 
 const fontSans =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+const primaryColor = "#0c2340";
+const textGrayColor = "#979797";
 
 const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
   return (
@@ -32,8 +34,8 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                                 width: 100,
                                 borderRadius: 0,
                                 border: "none",
+                                maxWidth: "none",
                               }}
-                              className="max-w-none"
                             />
                           </td>
                         </tr>
@@ -54,7 +56,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                                 marginBottom: 5,
                               }}
                             >
-                              <span className="text-primary">{name}</span>
+                              <span style={{ color: primaryColor }}>{name}</span>
                             </p>
                           </td>
                         </tr>
@@ -69,12 +71,16 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                               }}
                             >
                               <span
-                                style={{ paddingRight: 4, fontSize: 13, fontWeight: 600 }}
-                                className="text-primary"
+                                style={{
+                                  color: primaryColor,
+                                  paddingRight: 4,
+                                  fontSize: 13,
+                                  fontWeight: 600,
+                                }}
                               >
                                 M:
                               </span>
-                              <span style={{ color: "#979797", textDecoration: "none" }}>
+                              <span style={{ color: textGrayColor, textDecoration: "none" }}>
                                 {phone}
                               </span>
                             </p>
@@ -91,14 +97,18 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                               }}
                             >
                               <span
-                                style={{ paddingRight: 10, fontSize: 13, fontWeight: 600 }}
-                                className="text-primary"
+                                style={{
+                                  color: primaryColor,
+                                  paddingRight: 10,
+                                  fontSize: 13,
+                                  fontWeight: 600,
+                                }}
                               >
                                 E:
                               </span>
                               <a
                                 href={`mailto:${email}`}
-                                style={{ color: "#979797", textDecoration: "none !important" }}
+                                style={{ color: textGrayColor, textDecoration: "none !important" }}
                               >
                                 {email}
                               </a>
