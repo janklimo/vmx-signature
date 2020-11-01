@@ -7,6 +7,8 @@ import Signature from "../components/Signature";
 
 export default function Home() {
   const [name, setName] = useState<string>("Nick Laird");
+  const [email, setEmail] = useState<string>("email@verumex.com");
+  const [phone, setPhone] = useState<string>("+1 234567890");
 
   return (
     <>
@@ -48,6 +50,8 @@ export default function Home() {
                 id="grid-phone"
                 type="tel"
                 placeholder="+1 234567890"
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
               />
             </div>
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -62,11 +66,13 @@ export default function Home() {
                 id="grid-email"
                 type="email"
                 placeholder="email@verumex.com"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
               />
             </div>
           </div>
           <p className="font-bold text-gray-600">Preview</p>
-          <Signature name={name} />
+          <Signature {...{ name, phone, email }} />
           <h3 className="text-xl font-bold text-gray-600 mb-4">Step 2</h3>
           <p className="mb-4">This will copy signature into your clipboard.</p>
           <div className="my-12">
