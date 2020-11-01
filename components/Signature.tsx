@@ -42,7 +42,14 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                       <tbody>
                         <tr style={{ fontWeight: 600 }}>
                           <td valign="middle">
-                            <p style={{ fontSize: 18, margin: 0 }} className="font-sans">
+                            <p
+                              style={{
+                                fontSize: 18,
+                                lineHeight: "20px",
+                                marginBottom: 5,
+                              }}
+                              className="font-sans"
+                            >
                               <span className="text-primary">{name}</span>
                             </p>
                           </td>
