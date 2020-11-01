@@ -46,6 +46,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                               style={{
                                 fontSize: 18,
                                 lineHeight: "20px",
+                                margin: 0,
                                 marginBottom: 5,
                               }}
                               className="font-sans"
