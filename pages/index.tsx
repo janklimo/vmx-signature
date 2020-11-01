@@ -8,7 +8,7 @@ import Signature from "../components/Signature";
 export default function Home() {
   const [name, setName] = useState<string>("Nick Laird");
   const [email, setEmail] = useState<string>("email@verumex.com");
-  const [phone, setPhone] = useState<string>("+1 234567890");
+  const [phone, setPhone] = useState<string>("+1 234-567-8999");
 
   return (
     <>
@@ -49,7 +49,7 @@ export default function Home() {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-phone"
                 type="tel"
-                placeholder="+1 234567890"
+                placeholder="+1 234-567-8999"
                 value={phone}
                 onChange={(event) => setPhone(event.target.value)}
               />
