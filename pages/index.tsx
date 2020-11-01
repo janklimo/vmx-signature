@@ -6,8 +6,8 @@ import { copySignatureToClipboard } from "../utilities";
 import Signature from "../components/Signature";
 
 export default function Home() {
-  const [name, setName] = useState<string>("Nick Laird");
-  const [email, setEmail] = useState<string>("email@verumex.com");
+  const [name, setName] = useState<string>("John Doe");
+  const [email, setEmail] = useState<string>("@verumex.com");
   const [phone, setPhone] = useState<string>("+1 234-567-8999");
 
   return (
@@ -33,7 +33,7 @@ export default function Home() {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-name"
                 type="text"
-                placeholder="Nick Laird"
+                placeholder="John Doe"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
               />
@@ -65,7 +65,7 @@ export default function Home() {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-email"
                 type="email"
-                placeholder="email@verumex.com"
+                placeholder="@verumex.com"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
@@ -104,6 +104,10 @@ export default function Home() {
               Gmail
             </a>
             .
+          </p>
+          <p className="mt-2">
+            Using Chrome to paste your signature may lead to email link being underlined. Tested to
+            work correctly on MacOS with Safari and Firefox.
           </p>
         </div>
       </section>
