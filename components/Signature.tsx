@@ -6,6 +6,9 @@ interface Props {
   phone: string;
 }
 
+const fontSans =
+  'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+
 const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
   return (
     <table id="signature" cellPadding="0" cellSpacing="0" role="presentation" width="550">
@@ -44,12 +47,12 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                           <td valign="middle">
                             <p
                               style={{
+                                fontFamily: fontSans,
                                 fontSize: 18,
                                 lineHeight: "20px",
                                 margin: 0,
                                 marginBottom: 5,
                               }}
-                              className="font-sans"
                             >
                               <span className="text-primary">{name}</span>
                             </p>
@@ -58,8 +61,12 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         <tr>
                           <td valign="middle">
                             <p
-                              style={{ fontSize: 12, margin: 0, lineHeight: "15px" }}
-                              className="font-sans"
+                              style={{
+                                fontFamily: fontSans,
+                                fontSize: 12,
+                                margin: 0,
+                                lineHeight: "15px",
+                              }}
                             >
                               <span
                                 style={{ paddingRight: 4, fontSize: 13, fontWeight: 600 }}
@@ -76,8 +83,12 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         <tr>
                           <td valign="middle">
                             <p
-                              style={{ fontSize: 12, margin: 0, lineHeight: "15px" }}
-                              className="font-sans"
+                              style={{
+                                fontFamily: fontSans,
+                                fontSize: 12,
+                                margin: 0,
+                                lineHeight: "15px",
+                              }}
                             >
                               <span
                                 style={{ paddingRight: 10, fontSize: 13, fontWeight: 600 }}
