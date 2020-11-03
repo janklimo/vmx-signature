@@ -10,6 +10,7 @@ const fontSans =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 const primaryColor = "#0c2340";
 const textGrayColor = "#979797";
+const borderLightColor = "#e8e8e8";
 const dataLineTextStyles: CSSProperties = {
   fontFamily: fontSans,
   fontSize: 11,
@@ -36,7 +37,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                     <table cellPadding="0" cellSpacing="0" role="presentation">
                       <tbody>
                         <tr>
-                          <td style={{ paddingRight: 10 }}>
+                          <td style={{ paddingRight: 8 }}>
                             <img
                               width="75"
                               height="75"
@@ -65,8 +66,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                                 fontSize: 13,
                                 color: `${primaryColor} !important`,
                                 lineHeight: "16px",
-                                margin: 0,
-                                marginBottom: 4,
+                                margin: "0 0 4px 0",
                               }}
                             >
                               {name}
@@ -82,13 +82,15 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                               >
                                 {phone}
                               </span>
-                            </p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td valign="middle">
-                            <p style={dataLineTextStyles}>
-                              <span style={dataLineSubheadingStyles(10)}>E:</span>
+                              <span
+                                style={{
+                                  color: borderLightColor,
+                                  padding: "0 5px",
+                                }}
+                              >
+                                /
+                              </span>
+                              <span style={dataLineSubheadingStyles(4)}>E:</span>
                               <a
                                 href={`mailto:${email}`}
                                 style={{ color: textGrayColor, textDecoration: "none !important" }}
