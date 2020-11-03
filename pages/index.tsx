@@ -72,7 +72,9 @@ export default function Home() {
             </div>
           </div>
           <p className="font-bold text-gray-600">Preview</p>
-          <Signature {...{ name, phone, email }} />
+          <div className="my-3">
+            <Signature {...{ name, phone, email }} />
+          </div>
           <h2 className="text-xl font-bold text-gray-600 mb-4">Step 2</h2>
           <p className="mb-4">This will copy signature into your clipboard.</p>
           <div className="my-12">
