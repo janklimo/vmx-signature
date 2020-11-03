@@ -66,7 +66,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                                 fontSize: 13,
                                 color: `${primaryColor} !important`,
                                 lineHeight: "16px",
-                                margin: "0 0 4px 0",
+                                margin: "0 0 3px 0",
                               }}
                             >
                               {name}
