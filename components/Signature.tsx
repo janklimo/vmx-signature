@@ -12,14 +12,14 @@ const primaryColor = "#0c2340";
 const textGrayColor = "#979797";
 const dataLineTextStyles: CSSProperties = {
   fontFamily: fontSans,
-  fontSize: 12,
+  fontSize: 11,
   margin: 0,
   lineHeight: "14px",
 };
 const dataLineSubheadingStyles = (paddingRight: number): CSSProperties => ({
   color: `${primaryColor} !important`,
   paddingRight,
-  fontSize: 13,
+  fontSize: 12,
   fontWeight: 600,
 });
 
@@ -38,12 +38,12 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         <tr>
                           <td style={{ paddingRight: 10 }}>
                             <img
-                              width="80"
-                              height="80"
+                              width="75"
+                              height="75"
                               src="/logo.png"
                               alt="Verumex logo"
                               style={{
-                                width: 80,
+                                width: 75,
                                 borderRadius: 0,
                                 border: "none",
                                 maxWidth: "none",
@@ -62,7 +62,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                             <p
                               style={{
                                 fontFamily: fontSans,
-                                fontSize: 15,
+                                fontSize: 13,
                                 color: `${primaryColor} !important`,
                                 lineHeight: "16px",
                                 margin: 0,
