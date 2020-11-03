@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { CSSProperties, FunctionComponent } from "react";
 
 interface Props {
   name: string;
@@ -10,6 +10,18 @@ const fontSans =
   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 const primaryColor = "#0c2340";
 const textGrayColor = "#979797";
+const dataLineTextStyles: CSSProperties = {
+  fontFamily: fontSans,
+  fontSize: 12,
+  margin: 0,
+  lineHeight: "14px",
+};
+const dataLineSubheadingStyles = (paddingRight: number): CSSProperties => ({
+  color: `${primaryColor} !important`,
+  paddingRight,
+  fontSize: 13,
+  fontWeight: 600,
+});
 
 const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
   return (
@@ -26,12 +38,12 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         <tr>
                           <td style={{ paddingRight: 10 }}>
                             <img
-                              width="100"
-                              height="100"
+                              width="80"
+                              height="80"
                               src="/logo.png"
                               alt="Verumex logo"
                               style={{
-                                width: 100,
+                                width: 80,
                                 borderRadius: 0,
                                 border: "none",
                                 maxWidth: "none",
@@ -50,43 +62,24 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                             <p
                               style={{
                                 fontFamily: fontSans,
-                                fontSize: 18,
-                                lineHeight: "20px",
+                                fontSize: 15,
+                                color: `${primaryColor} !important`,
+                                lineHeight: "16px",
                                 margin: 0,
-                                marginBottom: 5,
+                                marginBottom: 4,
                               }}
                             >
-                              <span
-                                style={{
-                                  color: `${primaryColor} !important`,
-                                }}
-                              >
-                                {name}
-                              </span>
+                              {name}
                             </p>
                           </td>
                         </tr>
                         <tr>
                           <td valign="middle">
-                            <p
-                              style={{
-                                fontFamily: fontSans,
-                                fontSize: 12,
-                                margin: 0,
-                                lineHeight: "15px",
-                              }}
-                            >
+                            <p style={dataLineTextStyles}>
+                              <span style={dataLineSubheadingStyles(4)}>M:</span>
                               <span
-                                style={{
-                                  color: `${primaryColor} !important`,
-                                  paddingRight: 4,
-                                  fontSize: 13,
-                                  fontWeight: 600,
-                                }}
+                                style={{ color: textGrayColor, textDecoration: "none !important" }}
                               >
-                                M:
-                              </span>
-                              <span style={{ color: textGrayColor, textDecoration: "none" }}>
                                 {phone}
                               </span>
                             </p>
@@ -94,24 +87,8 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         </tr>
                         <tr>
                           <td valign="middle">
-                            <p
-                              style={{
-                                fontFamily: fontSans,
-                                fontSize: 12,
-                                margin: 0,
-                                lineHeight: "15px",
-                              }}
-                            >
-                              <span
-                                style={{
-                                  color: `${primaryColor} !important`,
-                                  paddingRight: 10,
-                                  fontSize: 13,
-                                  fontWeight: 600,
-                                }}
-                              >
-                                E:
-                              </span>
+                            <p style={dataLineTextStyles}>
+                              <span style={dataLineSubheadingStyles(10)}>E:</span>
                               <a
                                 href={`mailto:${email}`}
                                 style={{ color: textGrayColor, textDecoration: "none !important" }}
