@@ -39,12 +39,12 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                         <tr>
                           <td style={{ paddingRight: 8 }}>
                             <img
-                              width="50"
-                              height="50"
+                              width="42"
+                              height="42"
                               src="/logo.png"
                               alt="Verumex logo"
                               style={{
-                                width: 50,
+                                width: 42,
                                 borderRadius: 0,
                                 border: "none",
                                 maxWidth: "none",
@@ -66,7 +66,7 @@ const Preview: FunctionComponent<Props> = ({ name, phone, email }) => {
                                 fontSize: 13,
                                 color: `${primaryColor} !important`,
                                 lineHeight: "16px",
-                                margin: "0 0 3px 0",
+                                margin: 0,
                               }}
                             >
                               {name}
