@@ -15,6 +15,10 @@ export default function Home() {
       <Head>
         <title>VmX Email Signature</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="VmX Email Signature Generator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vmx-signature.netlify.app/" />
+        <meta property="og:image" content="/cover.png" />
       </Head>
       <section className="fixed top-0 left-0 overflow-y-scroll flex justify-center items-center bg-primary w-full h-full">
         <div className="bg-white p-8 lg:p-12">
