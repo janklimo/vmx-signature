@@ -19,6 +19,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://vmx-signature.netlify.app/" />
         <meta property="og:image" content="/cover.png" />
+        <meta name="robots" content="noindex" />
       </Head>
       <section className="fixed top-0 left-0 overflow-y-scroll flex justify-center items-center bg-primary w-full h-full">
         <div className="bg-white p-8 lg:p-12">
